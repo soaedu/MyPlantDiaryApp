@@ -36,7 +36,7 @@ class ExampleUnitTest {
     }
 
     @Test
-    fun addOneAndTwo_equalsFour() {
-        assertEquals(4, 1 + 2)
+    fun addOneAndTwo_equalsThree() {
+        assertEquals(3, 1 + 2)
     }
 }
