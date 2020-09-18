@@ -1,8 +1,8 @@
-package com.sostrovsky.edu.myplantdiaryapp
+package edu.sostrovsky.myplantdiaryapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.sostrovsky.edu.myplantdiaryapp.ui.main.MainFragment
+import edu.sostrovsky.myplantdiaryapp.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

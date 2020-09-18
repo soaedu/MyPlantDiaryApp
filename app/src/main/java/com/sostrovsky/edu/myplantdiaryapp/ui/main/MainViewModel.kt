@@ -1,4 +1,4 @@
-package com.sostrovsky.edu.myplantdiaryapp.ui.main
+package edu.sostrovsky.myplantdiaryapp.ui.main
 
 import androidx.lifecycle.ViewModel
 

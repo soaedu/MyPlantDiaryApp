@@ -1,4 +1,4 @@
-package com.sostrovsky.edu.myplantdiaryapp.ui.main
+package edu.sostrovsky.myplantdiaryapp.ui.main
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.sostrovsky.edu.myplantdiaryapp.R
+import edu.sostrovsky.myplantdiaryapp.R
 
 class MainFragment : Fragment() {
 

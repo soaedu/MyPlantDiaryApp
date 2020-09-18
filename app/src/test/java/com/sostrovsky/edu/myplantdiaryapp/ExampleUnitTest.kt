@@ -1,4 +1,4 @@
-package com.sostrovsky.edu.myplantdiaryapp
+package edu.sostrovsky.myplantdiaryapp
 
 import org.junit.Test
 
