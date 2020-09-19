@@ -5,8 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import edu.sostrovsky.myplantdiaryapp.dto.Plant
 import edu.sostrovsky.myplantdiaryapp.ui.main.MainViewModel
 import edu.uc.jonesbr.myplantdiary.service.PlantService
+import io.mockk.confirmVerified
 import io.mockk.every
 import io.mockk.mockk
+import io.mockk.verify
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -36,6 +38,14 @@ class PlantDataUnitTest {
         givenAFeedOfMockedPlantDataAreAvailable()
         whenSearchForRedbud()
         thenResultContainsEasternRedbud()
+        thenVerifyFunctionsInvoked()
+    }
+
+    @Test
+    fun searchForGarbage_returnsNothing() {
+        givenAFeedOfMockedPlantDataAreAvailable()
+        whenISearchForGarbage()
+        thenIGetZeroResults()
     }
 
     private fun givenAFeedOfMockedPlantDataAreAvailable() {
@@ -83,11 +93,10 @@ class PlantDataUnitTest {
         assertTrue(redbudFound)
     }
 
-    @Test
-    fun searchForGarbage_returnsNothing() {
-        givenAFeedOfMockedPlantDataAreAvailable()
-        whenISearchForGarbage()
-        thenIGetZeroResults()
+    private fun thenVerifyFunctionsInvoked() {
+        verify {plantService.fetchPlants("Redbud")}
+        verify(exactly = 0) {plantService.fetchPlants("Maple")}
+        confirmVerified(plantService)
     }
 
     private fun whenISearchForGarbage() {
